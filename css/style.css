@@ -1,0 +1,246 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+.nav {
+	font-family: "Source Sans 3", sans-serif;
+}
+.container {
+	margin: 0 auto;
+	max-width: 1256px;
+}
+.nav-block {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 77px;
+}
+
+.nav-logo-box {
+	width: 140px;
+	height: 34px;
+}
+
+.nav-lists {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 294px;
+	height: 20px;
+}
+
+.nav-list {
+	color: rgb(125, 125, 125);
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 110%;
+}
+
+.nav-auth,
+.nav-contact {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 160%;
+	text-align: center;
+}
+
+.nav-auth {
+	color: rgb(93, 120, 255);
+	margin-right: 40px;
+}
+.nav-contact {
+	border: none;
+	border-radius: 8px;
+	background: rgb(93, 120, 255);
+	padding: 7px 24px 7px 24px;
+	color: rgb(255, 255, 255);
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+.promo-container {
+	display: grid;
+	grid-template-columns: 1fr 543px;
+}
+.promo-block-left {
+	padding: 81px 0 20px 51px;
+}
+.promo-title-box {
+	max-width: 611px;
+}
+.promo-title {
+	font-size: 40px;
+	font-weight: 600;
+	line-height: 120%;
+	letter-spacing: 2%;
+	text-align: left;
+}
+
+.promo-text-one {
+	margin-top: 16px;
+	color: rgb(0, 30, 65);
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 150%;
+	letter-spacing: 0.5%;
+}
+.promo-text-two {
+	margin-top: 6px;
+	color: rgb(145, 145, 145);
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 150%;
+	letter-spacing: 0.25%;
+}
+
+.promo-btn {
+	margin-top: 16px;
+	color: rgb(255, 255, 255);
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 150%;
+	letter-spacing: 0.5%;
+	text-align: center;
+	padding: 8px 24px 8px 24px;
+	border-radius: 8px;
+	border: none;
+	background: rgb(93, 120, 255);
+	cursor: pointer;
+}
+
+.promo-text-brands {
+	margin-top: 67px;
+	color: rgb(0, 30, 65);
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 150%;
+	letter-spacing: 0.5%;
+}
+
+.promo-box-brands {
+	display: flex;
+	justify-content: space-between ;
+	max-width: 631px;
+	min-height: 28px;
+	align-items: center;
+	margin-top: 6px;
+}
+.promo-block-right {
+	position: relative;
+	margin-top: 22.32px;
+	padding: 30.68px 53.6px 35px 109px;
+}
+
+.promo-img {
+	width: 100%;
+	height: 100%;
+}
+
+.promo-box-card {
+	position: absolute;
+}
+
+.promo-box-card-top {
+	top: 9.2px;
+	left: 52.82px;
+	width: 190px;
+	height: 152px;
+	border-radius: 6.24px;
+	box-shadow: 1px 0px 21.6px 8px rgb(193, 221, 223);
+	z-index: -2;
+	transform: rotate(-1.59deg);
+}
+.promo-card-up {
+	position: absolute;
+	top: 9.2px;
+	z-index: 10;
+	left: 52.82px;
+	width: 190.03px;
+	height: 150.93px;
+	border-radius: 9.2px;
+	transform: rotate(-1.59deg);
+}
+.promo-card-right {
+	position: absolute;
+	top: 75.68px;
+	right: 0;
+	width: 163.81px;
+	height: 88.61px;
+	border-radius: 6.24px;
+	transform: rotate(5.56deg);
+}
+.promo-box-card-right {
+	position: absolute;
+	top: 75.68px;
+	right: 0;
+	width: 163.81px;
+	height: 88.61px;
+	transform: rotate(5.56deg);
+	border-radius: 6.24px;
+	box-shadow: 1px 0px 21.6px 8px rgb(193, 221, 223);
+	z-index: -2;
+}
+.promo-box-card-left {
+	left: 0;
+	top: 273px;
+	width: 164.94px;
+	height: 89.78px;
+	transform: rotate(-6.7deg);
+	border-radius: 6.24px;
+	box-shadow: 1px 0px 21.6px 8px rgb(193, 221, 223);
+	z-index: -2;
+}
+.promo-card-left {
+	position: absolute;
+	top: 273px;
+	width: 164.94px;
+	height: 89.78px;
+	transform: rotate(-6.7deg);
+	border-radius: 6.24px;
+	left: 0;
+}
+
+.custom-dropdown {
+	position: relative;
+	width: 200px; /* Задайте ширину, чтобы подогнать под ваши требования */
+ }
+ 
+ .selected-option {
+	padding: 10px;
+	border: 1px solid #ccc;
+	cursor: pointer;
+ }
+ 
+ .options-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	display: none;
+	background-color: #fff;
+	border: 1px solid #ccc;
+ }
+ 
+ .options-list li {
+	padding: 10px;
+	cursor: pointer;
+ }
+ 
+ .options-list li:hover {
+	background-color: #f0f0f0;
+ }

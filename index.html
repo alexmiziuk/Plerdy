@@ -5,28 +5,167 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap"
+		rel="stylesheet">
 </head>
 
 <body>
-	<main>
-		<nav>
-			<div class="nav">
-				<div class="container">
-					<ul class="nav-lists">
-						<li>
-							<a class="nav-list" href="#pricing">Pricing</a>
-						</li>
-						<li>
-							<a class="nav-list" href="#use-сases">Use Cases</a>
-						</li>
-						<li>
-							<a class="nav-list" href="#book-a-Demo">Book a Demo</a>
-						</li>
-					</ul>
+	</head>
+
+	<body>
+		<div class="container">
+			<main>
+				<nav>
+					<div class="nav">
+						<div class="container">
+							<div class="nav-block">
+								<a href="#logo" class="nav-logo-box">
+									<img src="./resources/icons/Icon_Logo.png" alt="logo" class="nav-logo-img">
+								</a>
+								<ul class="nav-lists">
+									<li>
+										<a class="nav-list" href="#pricing">Pricing</a>
+									</li>
+									<li>
+										<a class="nav-list" href="#use-сases">Use Cases</a>
+									</li>
+									<li>
+										<a class="nav-list" href="#book-a-Demo">Book a Demo</a>
+									</li>
+								</ul>
+								<div class="nav-auth-contact">
+									<a href="" class="nav-auth">Sing In</a>
+									<button class="nav-contact">Contact sales</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+				<section>
+					<div class="promo">
+						<div class="container">
+							<div class="promo-container">
+								<div class="promo-block-left">
+									<div class="promo-title-box">
+										<h1 class="promo-title">
+											How to do a Website Audit to Improve SEO & Conversions
+										</h1>
+									</div>
+									<p class="promo-text-one">
+										Usability auditing with the Plerdy tool is a comprehensive expert assessment
+										of your website based on a profound study of user behavior registered on it.
+										Plerdy will provide you with crucial data based on which you will be able to run
+										an efficient usability audit of your website, identify and fix SEO issues,
+										and subsequently lead it to higher positions in search.
+									</p>
+									<p class="promo-text-two">
+										Thus, you'll compile a list of flaws in your website interface,
+										navigation, and conversion path that can eventually affect its micro
+										and macro conversion rates.
+									</p>
+									<button class="promo-btn">
+										Run the Plerdy tool
+									</button>
+									<p class="promo-text-brands">Trusted by some of the world's largest enterprises</p>
+									<div class="promo-box-brands">
+										<img src="./resources/icons/soft-serve.svg" alt="logo of the brand softserve"
+											class="promo-brand-logo">
+										<img src="./resources/icons/subaru.svg" alt="logo of the brand subaru"
+											class="promo-brand-logo">
+										<img src="./resources/icons/anex-tour.svg" alt="logo of the brand anextour"
+											class="promo-brand-logo">
+										<img src="./resources/icons/prom.svg" alt="logo of the brand prom"
+											class="promo-brand-logo">
+										<img src="./resources/icons/ukrposhta.svg" alt="logo of the brand ukrposhta"
+											class="promo-brand-logo">
+									</div>
+								</div>
+								<div class="promo-block-right">
+									<img src="./resources/img/woman-at-a-laptop.jpeg" alt="woman at a laptop" class="promo-img">
+									<div class="promo-box-card promo-box-card-top"></div>
+									<img src="./resources/img/card-up.jpeg" alt="promo card up" class="promo-card-up">
+									<div class="promo-box-card promo-box-card-right">
+									</div>
+									<img src="./resources/img/card-right.jpeg" alt="promo card right" class="promo-card-right">
+									<div class="promo-box-card promo-box-card-left">
+									</div>
+									<img src="./resources/img/card-left.jpeg" alt="promo card left" class="promo-card-left">
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<div class="modal">
+					<img src="" alt="modal image" class="modal img">
+					<div class="modal-block">
+						<div class="modal-title-box">
+							<h2 class="modal-title-block">
+								How to do a Website Audit to Improve SEO & Conversions
+							</h2>
+							<p class="modal-item">
+								You will get an SMS with a link to the webinar
+							</p>
+							<form>
+								<label for="name">Имя:</label>
+								<input type="text" id="name" placeholder="Boris Johnson">
+								<label for="phone">Телефон:</label>
+
+								<div class="custom-dropdown" id="countryDropdown">
+									<div class="selected-option">+380 (Украина)</div>
+									<ul class="options-list">
+										<li data-value="🇺🇦 +380" data-icon="./resources/icons/Flag.svg">+380 (Украина)</li>
+										<li data-value="🇺s +1">+1 (USA)</li>
+										<!-- Добавьте другие страны по необходимости -->
+									</ul>
+								</div>
+								<input type="tel" id="phoneNumber" placeholder="Введите номер" style="border: none;">
+								<button type="submit">Отправить</button>
+							</form>
+						</div>
+					</div>
 				</div>
-			</div>
-		</nav>
-	</main>
-</body>
+		</div>
+		</main>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+  var dropdown = document.getElementById("countryDropdown");
+  var selectedOption = dropdown.querySelector(".selected-option");
+  var optionsList = dropdown.querySelector(".options-list");
+
+  selectedOption.addEventListener("click", function () {
+    optionsList.style.display = optionsList.style.display === "block" ? "none" : "block";
+  });
+
+  optionsList.addEventListener("click", function (e) {
+    if (e.target.tagName === "LI") {
+      var selectedValue = e.target.getAttribute("data-value");
+      selectedOption.textContent = e.target.textContent;
+      optionsList.style.display = "none";
+      // Обновление значения телефона
+      updatePhoneNumber(selectedValue);
+    }
+  });
+
+  function updatePhoneNumber(value) {
+    // Ваша логика обновления значения телефона (если требуется)
+    console.log("Выбран код страны: " + value);
+  }
+
+  document.addEventListener("click", function (e) {
+    if (!dropdown.contains(e.target)) {
+      optionsList.style.display = "none";
+    }
+  });
+});
+
+
+		</script>
+
+	</body>
 
 </html>
