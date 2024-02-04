@@ -84,8 +84,8 @@ a {
 	font-size: 40px;
 	font-weight: 600;
 	line-height: 120%;
-	letter-spacing: 2%;
 	text-align: left;
+	color: rgb(0, 30, 65);
 }
 
 .promo-text-one {
@@ -131,7 +131,7 @@ a {
 
 .promo-box-brands {
 	display: flex;
-	justify-content: space-between ;
+	justify-content: space-between;
 	max-width: 631px;
 	min-height: 28px;
 	align-items: center;
@@ -212,18 +212,143 @@ a {
 	left: 0;
 }
 
-.custom-dropdown {
+.layer {
+	position: fixed;
+	top: 0;
+	left: -100%; /* Начальное положение вне видимой области слева */
+	z-index: 10000;
+	width: 100%;
+	height: 100%;
+	transition: left 0.6s ease;
+}
+
+.layer-open {
+	left: 0;
+}
+
+.modal {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	max-width: 800px;
+	margin: 0 auto;
+	margin-top: 114px;
+	max-height: 550px;
+}
+
+.modal-img {
+	max-width: 400px;
+	min-height: 550px;
+	border-radius: 14px 0 0 14px;
+}
+.modal-block {
 	position: relative;
-	width: 200px; /* Задайте ширину, чтобы подогнать под ваши требования */
- }
- 
- .selected-option {
-	padding: 10px;
-	border: 1px solid #ccc;
+	padding: 27.5px 42px 0px 42px;
+	background-color: white;
+}
+.modal-button-exit {
+	position: absolute;
+	border: none;
+	top: 9.31px;
+	right: 9.31px;
 	cursor: pointer;
- }
- 
- .options-list {
+}
+
+.modal-exit-img {
+	width: 11.38px;
+	height: 11.38px;
+}
+
+.modal-title-box {
+	max-width: 316px;
+	max-height: 164px;
+}
+
+.modal-title-block {
+	color: rgb(0, 30, 65);
+	font-size: 34px;
+	font-weight: 400;
+	line-height: 120%;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+.modal-item {
+	margin-top: 24px;
+	color: rgb(0, 30, 65);
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 150%;
+	letter-spacing: 0.25%;
+	text-align: center;
+}
+
+.modal-form {
+	display: flex;
+	flex-direction: column;
+}
+
+.modal-label-name {
+	margin-top: 24px;
+	color: rgb(145, 145, 145);
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 130%;
+}
+
+.modal-input-name {
+	margin-top: 4px;
+	box-sizing: border-box;
+	border: 1px solid rgb(213, 213, 214);
+	border-radius: 8px;
+	background: rgb(255, 255, 255);
+	padding: 8px 12px 8px 12px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 150%;
+}
+
+.modal-label-tel {
+	margin-top: 8px;
+	color: rgb(145, 145, 145);
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 130%;
+}
+
+.modal-tel-box {
+	display: flex;
+	margin-top: 4px;
+	box-sizing: border-box;
+	border: 1px solid rgb(213, 213, 214);
+	border-radius: 8px;
+	background: rgb(255, 255, 255);
+	align-items: center;
+}
+.modal-country-dropdown {
+	position: relative;
+	max-width: 100%;
+}
+
+.modal-selected-option {
+	display: flex;
+	border: none;
+	cursor: pointer;
+	width: 65px;
+	padding: 8px 12px 8px 12px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.modal-selected-item {
+	display: flex;
+	padding: 8px 12px 8px 12px;
+	justify-content: space-between;
+	align-items: center;
+}
+.modal-selected-option-number {
+	margin-right: 3px;
+}
+.modal-options-list {
 	list-style: none;
 	padding: 0;
 	margin: 0;
@@ -234,13 +359,201 @@ a {
 	display: none;
 	background-color: #fff;
 	border: 1px solid #ccc;
- }
- 
- .options-list li {
+}
+
+.modal-options-list li {
 	padding: 10px;
 	cursor: pointer;
- }
- 
- .options-list li:hover {
+}
+
+.modal-options-list li:hover {
 	background-color: #f0f0f0;
- }
+}
+
+.modal-input-tel {
+	padding: 8px 4.5px 8px 4.5px;
+
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 150%;
+	border: none;
+}
+
+.modal-button-box {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 0px 10px 0px;
+	width: 316px;
+	margin: 24px auto 0 auto;
+}
+.modal-button-support {
+	border-radius: 7px;
+	background: rgb(174, 209, 255);
+	color: rgb(255, 255, 255);
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 18px;
+	padding: 12px 41px 12px 41px;
+	border: none;
+	width: 153px;
+}
+
+.modal-button-contact {
+	color: rgb(255, 255, 255);
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 18px;
+	padding: 12px 0px 12px 0px;
+	border-radius: 7px;
+	background: rgb(93, 120, 255);
+	border: none;
+	width: 153px;
+}
+
+.modal-container-privacy {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	margin-top: 24px;
+}
+
+.modal-container-checkbox {
+	box-sizing: border-box;
+	border: 1px solid rgb(213, 213, 214);
+	border-radius: 4px;
+	background: rgb(255, 255, 255);
+}
+
+.modal-container-item {
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 15px;
+	color: rgb(145, 145, 145);
+	margin-left: 8.5px;
+}
+
+.modal-container-item a {
+	color: rgb(93, 120, 255);
+}
+
+.modal-logo-link {
+	position: absolute;
+	display: flex;
+	width: 138px;
+	justify-content: space-between;
+	left: 50%;
+	transform: translate(-50%);
+	bottom: 14px;
+}
+
+.modal-logo-icon {
+	height: 19.28px;
+}
+
+.modal-logo-text {
+	margin-top: 5px;
+	color: rgb(189, 189, 189);
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 14px;
+}
+
+.modal-logo-text span {
+	text-decoration: underline;
+}
+
+.reasons {
+	margin-bottom: 76px;
+}
+
+.reasons-title {
+	margin-top: 100px;
+	font-size: 36px;
+	font-weight: 400;
+	line-height: 42px;
+	color: rgb(0, 30, 65);
+}
+
+.reasons-title span {
+	color: rgb(145, 145, 145);
+}
+.container-for-carousel {
+	position: relative;
+}
+.reasons-carousel-container {
+	width: 1348px;
+	margin-top: 40px;
+}
+.reasons-inner-carousel {
+	position: relative;
+}
+.reasons-inner-carousel .slick-next,
+.reasons-inner-carousel .slick-prev {
+	position: absolute;
+	border: none;
+	top: -76px;
+	z-index: 10000;
+}
+
+.reasons-inner-carousel .slick-next {
+	right: 68px;
+}
+
+.reasons-inner-carousel .slick-prev {
+	right: 105px;
+}
+
+.slick-arrow-img {
+	width: 28px;
+	height: 28px;
+}
+
+.reasons-carousel-card {
+	width: 280px !important;
+	height: 372px !important;
+	padding: 20px;
+}
+
+.reasons-carousel-title {
+	color: rgb(0, 30, 65);
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 150%;
+}
+
+.reasons-carousel-text {
+	margin-top: 20px;
+	color: rgb(0, 30, 65);
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 150%;
+}
+
+.reasons-btn-text-box {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 40px auto;
+	width: 719px;
+	height: 40px;
+}
+
+.reasons-btn-boost {
+	padding: 8px 24px 8px 24px;
+	color: rgb(255, 255, 255);
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 150%;
+	border-radius: 8px;
+	background: rgb(93, 120, 255);
+	border: none;
+}
+
+.reason-text-motivation {
+	color: rgb(0, 30, 65);
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 130%;
+	width: 440px;
+	margin-top: 2px;
+}

@@ -1,0 +1,33 @@
+<svg width="29.505005" height="19.281006" viewBox="0 0 29.505 19.281" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<linearGradient id="paint_linear_1_2163_0" x1="-0.000003" y1="-0.000109" x2="31.666037" y2="4.690039" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#2D8DFE"/>
+			<stop offset="1.000000" stop-color="#0E77F1"/>
+		</linearGradient>
+		<linearGradient id="paint_linear_1_2164_0" x1="-0.000163" y1="-0.000109" x2="31.665884" y2="4.690058" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#2D8DFE"/>
+			<stop offset="1.000000" stop-color="#0E77F1"/>
+		</linearGradient>
+		<linearGradient id="paint_linear_1_2165_0" x1="0.000288" y1="0.000103" x2="31.666332" y2="4.690243" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#2D8DFE"/>
+			<stop offset="1.000000" stop-color="#0E77F1"/>
+		</linearGradient>
+		<linearGradient id="paint_linear_1_2166_0" x1="-0.000132" y1="-0.000082" x2="31.665899" y2="4.690090" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#2D8DFE"/>
+			<stop offset="1.000000" stop-color="#0E77F1"/>
+		</linearGradient>
+		<linearGradient id="paint_linear_1_2167_0" x1="0.000097" y1="-0.000008" x2="31.666138" y2="4.690174" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#2D8DFE"/>
+			<stop offset="1.000000" stop-color="#0E77F1"/>
+		</linearGradient>
+	</defs>
+	<rect id="Frame 28" width="29.505009" height="19.280897" fill="#FFFFFF" fill-opacity="0"/>
+	<path id="Vector" d="M0 11.5684L0 17.3755C0 18.4277 0.878906 19.281 1.9635 19.281L7.26245 19.281L7.26245 8.98608L0 11.5684Z" fill="url(#paint_linear_1_2163_0)" fill-opacity="1.000000" fill-rule="nonzero"/>
+	<path id="Vector" d="M7.56519 8.98608L10.1592 12.7654L10.1592 19.2808L7.56519 15.8237L7.56519 8.98608Z" fill="url(#paint_linear_1_2164_0)" fill-opacity="1.000000" fill-rule="nonzero"/>
+	<path id="Vector" d="M10.4626 7.31348L10.4626 19.2808L17.7288 19.2808L17.725 4.7312L10.4626 7.31348Z" fill="url(#paint_linear_1_2165_0)" fill-opacity="1.000000" fill-rule="nonzero"/>
+	<path id="Vector" d="M18.0273 4.73071L20.9806 9.70679L20.9806 19.2808L18.0289 14.1619L18.0273 4.73071Z" fill="url(#paint_linear_1_2166_0)" fill-opacity="1.000000" fill-rule="nonzero"/>
+	<path id="Vector" d="M21.2837 2.92529L21.2837 19.2808L27.5417 19.2808C28.6261 19.2808 29.505 18.4277 29.505 17.3752L29.505 0L21.2837 2.92529Z" fill="url(#paint_linear_1_2167_0)" fill-opacity="1.000000" fill-rule="nonzero"/>
+</svg>
