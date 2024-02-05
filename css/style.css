@@ -285,6 +285,7 @@ a {
 .modal-form {
 	display: flex;
 	flex-direction: column;
+	position: relative;
 }
 
 .modal-label-name {
@@ -317,6 +318,7 @@ a {
 
 .modal-tel-box {
 	display: flex;
+	position: relative;
 	margin-top: 4px;
 	box-sizing: border-box;
 	border: 1px solid rgb(213, 213, 214);
@@ -386,7 +388,9 @@ a {
 	width: 316px;
 	margin: 24px auto 0 auto;
 }
-.modal-button-support {
+
+.modal-button-support,
+.modal-button-contact {
 	border-radius: 7px;
 	background: rgb(174, 209, 255);
 	color: rgb(255, 255, 255);
@@ -396,22 +400,18 @@ a {
 	padding: 12px 41px 12px 41px;
 	border: none;
 	width: 153px;
+	cursor: pointer;
 }
 
 .modal-button-contact {
-	color: rgb(255, 255, 255);
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 18px;
 	padding: 12px 0px 12px 0px;
-	border-radius: 7px;
 	background: rgb(93, 120, 255);
-	border: none;
-	width: 153px;
+	cursor: pointer;
 }
 
 .modal-container-privacy {
 	display: flex;
+	position: relative;
 	flex-direction: row;
 	width: 100%;
 	margin-top: 24px;
@@ -493,6 +493,7 @@ a {
 	border: none;
 	top: -76px;
 	z-index: 10000;
+	cursor: pointer;
 }
 
 .reasons-inner-carousel .slick-next {
@@ -547,6 +548,7 @@ a {
 	border-radius: 8px;
 	background: rgb(93, 120, 255);
 	border: none;
+	cursor: pointer;
 }
 
 .reason-text-motivation {
@@ -557,3 +559,40 @@ a {
 	width: 440px;
 	margin-top: 2px;
 }
+
+.invalid {
+	border: 1px solid red;
+}
+
+.error {
+	color: red;
+	font-size: 14px;
+	top: 88px;
+	left: 185px;
+	
+	position: absolute;
+}
+
+.error-position {
+	top: 42px;
+}
+
+.hide {
+	opacity: 0;
+	display: none;
+}
+
+.invisible {
+	background-color: transparent;
+	border: none;
+}
+
+.invalid-checkbox {
+	height: 40px;
+	border: 1px solid red;
+	border-radius: 9px;
+}
+.error-checkbox {
+	top: -22px;
+}
+

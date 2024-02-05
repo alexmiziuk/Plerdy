@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const dropdown = document.getElementById("countryDropdown");
 	const selectedOption = dropdown.querySelector(".modal-selected-option");
 	const optionsList = dropdown.querySelector(".modal-options-list");
-
+	
 	selectedOption.addEventListener("click", function () {
 		optionsList.style.display = optionsList.style.display === "block" ? "none" : "block";
 	});
@@ -58,7 +58,82 @@ document.addEventListener("DOMContentLoaded", function () {
 			openModal();
 		}, 7000);
 	 */
+
+
+
 });
+
+// validation form
+
+const form = document.querySelector("form[name='contact-form']");
+const nameInput = document.querySelector("input[name='name']");
+const phoneInput = document.querySelector("input[name='phone']");
+const phoneBox = document.querySelector(".modal-tel-box");
+const checkbox = document.querySelector("input[name='checkbox']");
+const privacy = document.querySelector(".modal-container-privacy");
+const containerItem = document.querySelector(".modal-container-item");
+const error = document.querySelector(".error-checkbox")
+
+
+nameInput.isValid = () => !!nameInput.value;
+phoneInput.isValid = () => isValidPhone(phoneInput.value);
+checkbox.isValid = () => checkbox.checked;
+
+const inputFields = [nameInput, phoneInput, checkbox];
+
+const isValidPhone = (phone) => {
+  const re = /[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+  return re.test(String(phone).toLowerCase());
+};
+
+let shouldValidate = false;
+let isFormValid = false;
+
+const validateInputs = () => {
+  console.log("we are here");
+  if (!shouldValidate) return;
+
+  isFormValid = true;
+  inputFields.forEach((input) => {
+    input.classList.remove("invalid");
+    input.nextElementSibling.classList.add("hide");
+
+    if (!input.isValid()) {
+      input.classList.add("invalid");
+      isFormValid = false;
+      input.nextElementSibling.classList.remove("hide");
+    }
+  });
+
+  if (!phoneInput.isValid()) {
+    phoneBox.classList.add("invalid");
+  } else {
+    phoneBox.classList.remove("invalid");
+	}
+	
+  if (!checkbox.isValid()) {
+	  privacy.classList.add("invalid-checkbox");
+	  error.classList.remove("hide");
+  } else {
+	  privacy.classList.remove("invalid-checkbox");
+	  containerItem.classList.remove("hide");
+	  error.classList.add("hide");
+
+	}
+};
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  shouldValidate = true;
+  validateInputs();
+  if (isFormValid) {
+	  console.log("happy");
+	  form.reset();
+    // TODO: DO AJAX REQUEST
+  }
+});
+
+inputFields.forEach((input) => input.addEventListener("input", validateInputs));
 
 $(document).ready(function () {
 	$('.reasons-inner-carousel').slick({

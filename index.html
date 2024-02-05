@@ -108,9 +108,10 @@
 						<p class="modal-item">
 							You will get an SMS with a link to the webinar
 						</p>
-						<form class="modal-form">
+						<form class="modal-form" name="contact-form" action="#">
 							<label class="modal-label-name" for="name">Name</label>
-							<input class="modal-input-name" type="text" id="name" placeholder="Boris Johnson">
+							<input class="modal-input-name" type="text" id="name" placeholder="Boris Johnson" name="name">
+							<div class="error hide">Name is required</div>
 							<label class="modal-label-tel" for="phone">Lable</label>
 							<div class="modal-tel-box">
 								<div class="modal-country-dropdown" id="countryDropdown">
@@ -126,20 +127,24 @@
 										<li data-value="🇺s +1">+1 (USA)</li>
 									</ul>
 								</div>
-								<input class="modal-input-tel" type="tel" id="phoneNumber" placeholder="XX XXX XXXX">
+								<input class="modal-input-tel invisible" type="tel" id="phoneNumber" placeholder="XX XXX XXXX" name="phone">
+								<div class="error hide error-position">Phone is invalid</div>
 							</div>
+							
+							
 							<div class="modal-button-box">
 								<button class="modal-button-support" type="submit">Support</button>
 								<button class="modal-button-contact" type="submit">Contact sales</button>
 							</div>
 							<div class="modal-container-privacy">
-								<input class="modal-container-checkbox" type="checkbox">
+								<input class="modal-container-checkbox" type="checkbox" name="checkbox">
 								<p class="modal-container-item">
 									By sending up? you agree to our <a href="/#conditions">
 										Conditions</a>
 									and
 									<a href="/#privacy">Privacy Policy<a>
 								</p>
+								<div class="error error-checkbox hide">checkbox is required</div>
 							</div>
 						</form>
 						<a href="#/modal-logo-link" class="modal-logo-link">
@@ -237,8 +242,9 @@
 							Boost my website conversion
 						</button>
 						<p class="reason-text-motivation">
-							So, it’s high time for you to stop losing 99% of potential clients due to being unaware of your website
-							 users’ behavior patterns and needs.
+							So, it’s high time for you to stop losing 99% of potential clients due to being unaware of your
+							website
+							users’ behavior patterns and needs.
 						</p>
 					</div>
 				</div>
