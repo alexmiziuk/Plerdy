@@ -144,12 +144,6 @@ $(document).ready(function () {
 				}
 			},
 			{
-				breakpoint: 1120,
-				settings: {
-					arrows: false
-				}
-			},
-			{
 				breakpoint: 768,
 				settings: {
 					slidesToScroll: 1,

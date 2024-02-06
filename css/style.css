@@ -631,7 +631,8 @@ a {
 	.reasons-carousel-card {
 		width: 220px !important;
 	}
-
+}
+@media (max-width: 1120px) {
 	.slick-prev {
 		display: none !important;
 	}
