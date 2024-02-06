@@ -512,22 +512,22 @@ a {
 	cursor: pointer;
 }
 .reasons-inner-carousel .slick-next,
-.reasons-inner-carousel .slick-prev  {
+.reasons-inner-carousel .slick-prev {
 	right: 68px;
 	width: 28px;
 	height: 28px;
-	background-image:url(../resources/icons/next-slick.png);
+	background-image: url(../resources/icons/next-slick.png);
 	background-size: cover;
 	color: rgba(255, 255, 255, 0);
 	transition: all 0.3s;
 }
 .reasons-inner-carousel .slick-prev {
 	right: 105px;
-	background-image:url(../resources/icons/prev-slick.png);
+	background-image: url(../resources/icons/prev-slick.png);
 }
 
 .reasons-inner-carousel .slick-next:hover,
-.reasons-inner-carousel .slick-prev:hover{
+.reasons-inner-carousel .slick-prev:hover {
 	width: 29px;
 	height: 29px;
 }
@@ -623,6 +623,11 @@ a {
 @media (max-width: 1280px) {
 	.container {
 		padding: 0 10px 0 10px;
+	}
+}
+@media (max-width: 1216px) {
+	.reasons-carousel-card {
+		width: 252px !important;
 	}
 }
 @media (max-width: 1200px) {
