@@ -144,17 +144,25 @@ $(document).ready(function () {
 				}
 			},
 			{
+				breakpoint: 1120,
+				settings: {
+					dots: true
+				}
+			},
+			{
 				breakpoint: 768,
 				settings: {
 					slidesToScroll: 1,
-					slidesToShow: 2
+					slidesToShow: 2,
+					dots: true
 				}
 			},
 			{
 				breakpoint: 480,
 				settings: {
 					slidesToScroll: 1,
-					slidesToShow: 1
+					slidesToShow: 1,
+					dots: true
 				}
 			}
 		]

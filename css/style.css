@@ -639,6 +639,38 @@ a {
 	.slick-next {
 		display: none !important;
 	}
+	.slick-dots {
+		display: flex !important;
+		width: 42px !important;
+		justify-content: space-between;
+		margin: 10px auto;
+	}
+	#slick-slide-control00,
+	#slick-slide-control01,
+	#slick-slide-control02,
+	#slick-slide-control03,
+	#slick-slide-control04,
+	#slick-slide-control05 {
+		border-radius: 50% !important;
+		width: 10px;
+		height: 10px;
+		color: rgba(255, 0, 0, 0);
+		border: 1px solid #c5c3c3;
+		cursor: pointer;
+		transition: all 0.6s;
+	}
+	#slick-slide-control00[aria-selected="true"],
+	#slick-slide-control01[aria-selected="true"],
+	#slick-slide-control02[aria-selected="true"],
+	#slick-slide-control03[aria-selected="true"],
+	#slick-slide-control04[aria-selected="true"],
+	#slick-slide-control05[aria-selected="true"] {
+		background: rgb(93, 120, 255);
+		border: 1px solid rgb(93, 120, 255);
+	}
+	.reasons-btn-text-box {
+		margin-top: 20px;
+	}
 }
 @media (max-width: 1056px) {
 	.promo-box-container-doubler {
@@ -787,13 +819,11 @@ a {
 		font-weight: 600;
 		line-height: 150%;
 		text-align: left;
-		/* width: 235px; */
 		margin-left: 20px;
 	}
 	.reasons-carousel-text {
 		font-size: 12px;
 		margin-left: 20px;
-		/* width: 254px */
 	}
 	.reasons-carousel-card {
 		height: 372px !important;
