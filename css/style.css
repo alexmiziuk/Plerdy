@@ -826,7 +826,7 @@ a {
 		margin-left: 20px;
 	}
 	.reasons-carousel-card {
-		height: 372px !important;
+		height: 419px !important;
 	}
 	.slick-dots {
 		width: 74px !important;
@@ -1051,7 +1051,7 @@ a {
 		margin-left: 20px;
 	}
 	.reasons-carousel-card {
-		height: 340px !important;
+		height: 429px !important;
 	}
 }
 @media (max-width: 480px) {
@@ -1062,6 +1062,7 @@ a {
 @media (max-width: 361px) {
 	.reasons-carousel-card {
 		width: 320px !important;
+		height: 372px;
 		padding: 0;
 	}
 	.reasons-carousel-text {
