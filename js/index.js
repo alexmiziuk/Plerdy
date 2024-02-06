@@ -63,7 +63,7 @@ const phoneBox = document.querySelector(".modal-tel-box");
 const checkbox = document.querySelector("input[name='checkbox']");
 const privacy = document.querySelector(".modal-container-privacy");
 const containerItem = document.querySelector(".modal-container-item");
-const error = document.querySelector(".error-checkbox")
+const error = document.querySelector(".error-checkbox");
 
 
 nameInput.isValid = () => !!nameInput.value;
@@ -147,7 +147,6 @@ $(document).ready(function () {
 				breakpoint: 1120,
 				settings: {
 					arrows: false
-
 				}
 			},
 			{
@@ -160,7 +159,6 @@ $(document).ready(function () {
 			{
 				breakpoint: 480,
 				settings: {
-					arrows: false,
 					slidesToScroll: 1,
 					slidesToShow: 1
 				}

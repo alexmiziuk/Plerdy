@@ -631,6 +631,13 @@ a {
 	.reasons-carousel-card {
 		width: 220px !important;
 	}
+
+	.slick-prev {
+		display: none !important;
+	}
+	.slick-next {
+		display: none !important;
+	}
 }
 @media (max-width: 1056px) {
 	.promo-box-container-doubler {
