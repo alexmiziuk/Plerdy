@@ -612,7 +612,7 @@ a {
 		width: 100%;
 	}
 	.reasons-carousel-card {
-		width: 272px !important;
+		width: 256px !important;
 	}
 }
 @media (max-width: 1280px) {
@@ -629,7 +629,7 @@ a {
 		display: none;
 	}
 	.reasons-carousel-card {
-		width: 220px !important;
+		width: 216px !important;
 	}
 }
 @media (max-width: 1120px) {
@@ -681,6 +681,7 @@ a {
 @media (max-width: 782px) {
 	.reasons-btn-text-box {
 		flex-direction: column;
+		align-items: center;
 	}
 	.reasons-btn-boost {
 		max-width: 259px;
