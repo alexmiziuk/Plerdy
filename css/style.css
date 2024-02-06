@@ -1062,7 +1062,7 @@ a {
 @media (max-width: 361px) {
 	.reasons-carousel-card {
 		width: 320px !important;
-		height: 372px;
+		height: 372px !important;
 		padding: 0;
 	}
 	.reasons-carousel-text {
