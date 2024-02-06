@@ -131,8 +131,6 @@ $(document).ready(function () {
 		infinite: false,
 		slidesToShow: 4,
 		slidesToScroll: 1,
-		prevArrow: '<button type="button" class="slick-prev"><img class="slick-arrow-img" src="../resources/icons/prev-slick.png" alt="button prev slider" /></button>',
-		nextArrow: '<button type="button" class="slick-next"><img class="slick-arrow-img" src="../resources/icons/next-slick.png" alt="button next slider" /></button>',
 		responsive: [
 			{
 				breakpoint: 1440,
