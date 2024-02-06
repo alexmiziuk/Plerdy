@@ -15,33 +15,41 @@
 </head>
 
 <body>
-	<main>
-		<nav>
-			<div class="nav">
-				<div class="container">
-					<div class="nav-block">
-						<a href="#logo" class="nav-logo-box">
-							<img src="./resources/icons/Icon_Logo.png" alt="logo" class="nav-logo-img">
-						</a>
-						<ul class="nav-lists">
-							<li>
-								<a class="nav-list" href="#pricing">Pricing</a>
-							</li>
-							<li>
-								<a class="nav-list" href="#use-сases">Use Cases</a>
-							</li>
-							<li>
-								<a class="nav-list" href="#book-a-Demo">Book a Demo</a>
-							</li>
-						</ul>
-						<div class="nav-auth-contact">
-							<a href="" class="nav-auth">Sing In</a>
-							<button class="nav-contact">Contact sales</button>
-						</div>
+
+	<nav>
+		<div class="nav">
+			<div class="container">
+				<div class="nav-block">
+					<a href="#logo" class="nav-logo-box">
+						<img src="./resources/icons/Icon_Logo.png" alt="logo" class="nav-logo-img">
+					</a>
+					<ul class="nav-lists">
+						<li>
+							<a class="nav-list" href="#pricing">Pricing</a>
+						</li>
+						<li>
+							<a class="nav-list" href="#use-сases">Use Cases</a>
+						</li>
+						<li>
+							<a class="nav-list" href="#book-a-Demo">Book a Demo</a>
+						</li>
+					</ul>
+					<div class="nav-auth-contact">
+						<a href="" class="nav-auth">Sing In</a>
+						<button class="nav-contact">Contact sales</button>
 					</div>
 				</div>
+				<span class="nav-divider">
+					
+				</span>
 			</div>
-		</nav>
+		</div>
+
+		<button class="burger">
+			<img src="./resources/icons/burger-icon.png" alt="burger icon" class="burger-img">
+		</button>
+	</nav>
+	<main>
 		<section>
 			<div class="promo">
 				<div class="container">
@@ -68,15 +76,37 @@
 								Run the Plerdy tool
 							</button>
 							<p class="promo-text-brands">Trusted by some of the world's largest enterprises</p>
-							<div class="promo-box-brands">
-								<img src="./resources/icons/soft-serve.svg" alt="logo of the brand softserve"
-									class="promo-brand-logo">
-								<img src="./resources/icons/subaru.svg" alt="logo of the brand subaru" class="promo-brand-logo">
-								<img src="./resources/icons/anex-tour.svg" alt="logo of the brand anextour"
-									class="promo-brand-logo">
-								<img src="./resources/icons/prom.svg" alt="logo of the brand prom" class="promo-brand-logo">
-								<img src="./resources/icons/ukrposhta.svg" alt="logo of the brand ukrposhta"
-									class="promo-brand-logo">
+							<div class="promo-box-container">
+
+								<div class="promo-brand-box">
+									<img src="./resources/icons/soft-serve.svg" alt="logo of the brand softserve"
+										class="promo-brand-logo">
+								</div>
+								<div class="promo-brand-box">
+									<img src="./resources/icons/subaru.svg" alt="logo of the brand subaru"
+										class="promo-brand-logo">
+								</div>
+								<div class="promo-brand-box">
+									<img src="./resources/icons/anex-tour.svg" alt="logo of the brand anextour"
+										class="promo-brand-logo">
+								</div>
+								<div class="promo-brand-box promo-brand-box-four">
+									<img src="./resources/icons/prom.svg" alt="logo of the brand prom" class="promo-brand-logo">
+								</div>
+								<div class="promo-brand-box promo-brand-box-five">
+									<img src="./resources/icons/ukrposhta.svg" alt="logo of the brand ukrposhta"
+										class="promo-brand-logo">
+								</div>
+							</div>
+							<div class="promo-box-container-doubler">
+								<div class="promo-brand-box-doubler">
+									<img src="./resources/icons/prom.svg" alt="logo of the brand prom" class="promo-brand-logo">
+								</div>
+								<div class="promo-brand-box-doubler">
+									<img src="./resources/icons/ukrposhta.svg" alt="logo of the brand ukrposhta"
+										class="promo-brand-logo">
+								</div>
+
 							</div>
 						</div>
 						<div class="promo-block-right">
@@ -127,11 +157,10 @@
 										<li data-value="🇺s +1">+1 (USA)</li>
 									</ul>
 								</div>
-								<input class="modal-input-tel invisible" type="tel" id="phoneNumber" placeholder="XX XXX XXXX" name="phone">
+								<input class="modal-input-tel invisible" type="tel" id="phoneNumber" placeholder="XX XXX XXXX"
+									name="phone">
 								<div class="error hide error-position">Phone is invalid</div>
 							</div>
-							
-							
 							<div class="modal-button-box">
 								<button class="modal-button-support" type="submit">Support</button>
 								<button class="modal-button-contact" type="submit">Contact sales</button>

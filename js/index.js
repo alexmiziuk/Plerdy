@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	function closeModal() {
 		layer.classList.remove('layer-open');
 		body.style.overflow = '';
-	}
+	} 
 
 	/* 	setTimeout(function () {
 			openModal();
