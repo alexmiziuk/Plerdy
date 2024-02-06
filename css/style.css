@@ -708,6 +708,7 @@ a {
 	}
 	.reasons-carousel-card {
 		width: 137px !important;
+		height: 447px !important;
 	}
 }
 @media (max-width: 782px) {
