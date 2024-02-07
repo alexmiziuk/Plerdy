@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="./css/slick.css" />
+	<link rel="stylesheet" type="text/css" href="./css/slick.css">
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,9 +44,10 @@
 				</span>
 			</div>
 		</div>
-
 		<button class="burger">
-			<img src="./resources/icons/burger-icon.png" alt="burger icon" class="burger-img">
+			<span class="burger-decoration"></span>
+			<span class="burger-decoration"></span>
+			<span class="burger-decoration"></span>
 		</button>
 	</nav>
 	<main>
@@ -140,7 +141,7 @@
 							<label class="modal-label-name" for="name">Name</label>
 							<input class="modal-input-name" type="text" id="name" placeholder="Boris Johnson" name="name">
 							<div class="error hide">Name is required</div>
-							<label class="modal-label-tel" for="phone">Lable</label>
+							<label class="modal-label-tel" for="phoneNumber">Lable</label>
 							<div class="modal-tel-box">
 								<div class="modal-country-dropdown" id="countryDropdown">
 									<div class="modal-selected-option">
@@ -165,13 +166,10 @@
 							</div>
 							<div class="modal-container-privacy">
 								<input class="modal-container-checkbox" type="checkbox" name="checkbox">
-								<p class="modal-container-item">
-									By sending up? you agree to our <a href="/#conditions">
-										Conditions</a>
-									and
-									<a href="/#privacy">Privacy Policy<a>
-								</p>
-								<div class="error error-checkbox hide">checkbox is required</div>
+								<div class="modal-container-item">
+									By sending up you agree to our <a href="/#conditions">Conditions</a> and <a href="/#privacy">Privacy Policy</a>
+							  </div>
+							  <div class="error error-checkbox hide">checkbox is required</div>
 							</div>
 						</form>
 						<a href="#/modal-logo-link" class="modal-logo-link">
@@ -278,8 +276,8 @@
 			</div>
 		</section>
 	</main>
-	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="./js/slick.min.js"></script>
 	<script src="./js/index.js"></script>
 </body>
