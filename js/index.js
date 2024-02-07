@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			selectedTriangle.src = selectedData.triangle;
 			selectedTriangle.alt = "Triangle";
 			selectedTriangle.classList.add("modal-selected-triangle");
-			
+
 			selectedOption.innerHTML = "";
 			selectedOption.appendChild(selectedValue);
 			selectedOption.appendChild(selectedFlag);
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const inputFields = [nameInput, phoneInput, checkbox];
 
 	const isValidPhone = (phone) => {
-		const re = /[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+		const re = /^[^\+]*[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
 		return re.test(String(phone).toLowerCase());
 	};
 
