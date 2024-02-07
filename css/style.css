@@ -373,6 +373,10 @@ a {
 	justify-content: space-between;
 	align-items: center;
 }
+.modal-selected-option-img {
+	width: 17px;
+	height: 15px;
+}
 .modal-selected-option-number {
 	margin-right: 3px;
 }

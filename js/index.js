@@ -1,24 +1,56 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+	const countryData = {
+		"+380": {
+			flag: "./resources/icons/Flag.svg",
+			value: "+380",
+			triangle: "./resources/icons/inverted-triangle.svg"
+		},
+		"+1": {
+			flag: " ./resources/icons/usa-icons.png",
+			value: "+1",
+			triangle: "./resources/icons/inverted-triangle.svg"
+		}
+	};
+
 	const dropdown = document.getElementById("countryDropdown");
 	const selectedOption = dropdown.querySelector(".modal-selected-option");
 	const optionsList = dropdown.querySelector(".modal-options-list");
+	const listItems = optionsList.querySelectorAll("li");
+
 
 	selectedOption.addEventListener("click", function () {
 		optionsList.style.display = optionsList.style.display === "block" ? "none" : "block";
 	});
 
-	optionsList.addEventListener("click", function (e) {
-		if (e.target.tagName === "LI") {
-			let selectedValue = e.target.getAttribute("data-value");
-			selectedOption.textContent = e.target.textContent;
+	listItems.forEach(function (li) {
+		li.addEventListener("click", function (e) {
+			let selectedCode = li.getAttribute("data-value");
+			let selectedData = countryData[selectedCode];
+			let selectedValue = document.createElement("img");
+			selectedValue.src = selectedData.flag;
+			selectedValue.alt = "Country Flag";
+			selectedValue.classList.add("modal-selected-option-img");
+			let selectedFlag = document.createElement("div");
+			selectedFlag.textContent = selectedData.value;
+			selectedFlag.classList.add("modal-selected-option-number");
+			let selectedTriangle = document.createElement("img");
+			selectedTriangle.src = selectedData.triangle;
+			selectedTriangle.alt = "Triangle";
+			selectedTriangle.classList.add("modal-selected-triangle");
+			
+			selectedOption.innerHTML = "";
+			selectedOption.appendChild(selectedValue);
+			selectedOption.appendChild(selectedFlag);
+			selectedOption.appendChild(selectedTriangle);
 			optionsList.style.display = "none";
-			updatePhoneNumber(selectedValue);
-		}
+			updatePhoneNumber(selectedData.value);
+		});
 	});
 
+
 	function updatePhoneNumber(value) {
-		console.log("Выбран код страны: " + value);
+		console.log("The country code is selected:" + value);
 	}
 
 	document.addEventListener("click", function (e) {
@@ -118,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		if (isFormValid) {
 			console.log("happy");
 			form.reset();
-			alert("Thank you");
+			alert("Thank you!");
 			// TODO: DO AJAX REQUEST
 		}
 	});
