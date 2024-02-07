@@ -525,15 +525,14 @@ a {
 	right: 105px;
 	background-image: url(../resources/icons/prev-slick.png);
 }
-
 .reasons-inner-carousel .slick-next:hover,
 .reasons-inner-carousel .slick-prev:hover {
 	width: 29px;
 	height: 29px;
 }
 .reasons-carousel-card {
-	width: 280px !important;
-	height: 372px !important;
+	/* width: 280px !important; */
+	min-height: 372px !important;
 	padding: 20px;
 }
 .reasons-carousel-card:hover {
@@ -616,18 +615,10 @@ a {
 	.reasons-carousel-container {
 		width: 100%;
 	}
-	.reasons-carousel-card {
-		width: 256px !important;
-	}
 }
 @media (max-width: 1280px) {
 	.container {
 		padding: 0 10px 0 10px;
-	}
-}
-@media (max-width: 1216px) {
-	.reasons-carousel-card {
-		width: 252px !important;
 	}
 }
 @media (max-width: 1200px) {
@@ -637,9 +628,6 @@ a {
 	.promo-brand-box-four,
 	.promo-brand-box-five {
 		display: none;
-	}
-	.reasons-carousel-card {
-		width: 216px !important;
 	}
 }
 @media (max-width: 1120px) {
@@ -687,9 +675,6 @@ a {
 		padding: 0;
 		justify-content: space-evenly;
 	}
-	.reasons-carousel-card {
-		width: 157px !important;
-	}
 }
 @media (max-width: 982px) {
 	.promo-box-container {
@@ -715,10 +700,6 @@ a {
 	.modal-img {
 		width: 100%;
 		object-position: left;
-	}
-	.reasons-carousel-card {
-		width: 137px !important;
-		height: 447px !important;
 	}
 }
 @media (max-width: 782px) {
@@ -835,9 +816,6 @@ a {
 	.reasons-carousel-text {
 		font-size: 12px;
 		margin-left: 20px;
-	}
-	.reasons-carousel-card {
-		height: 419px !important;
 	}
 	.slick-dots {
 		width: 74px !important;
@@ -1061,9 +1039,6 @@ a {
 		font-size: 12px;
 		margin-left: 20px;
 	}
-	.reasons-carousel-card {
-		height: 429px !important;
-	}
 }
 @media (max-width: 480px) {
 	.slick-dots {
@@ -1071,14 +1046,8 @@ a {
 	}
 }
 @media (max-width: 361px) {
-	.reasons-carousel-card {
-		width: 320px !important;
-		height: 372px !important;
-		padding: 0;
-	}
 	.reasons-carousel-text {
 		font-size: 12px;
 		margin-left: 20px;
-		width: 285px;
 	}
 }

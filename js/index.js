@@ -129,7 +129,7 @@ inputFields.forEach((input) => input.addEventListener("input", validateInputs));
 $(document).ready(function () {
 	$('.reasons-inner-carousel').slick({
 		infinite: false,
-		slidesToShow: 4,
+		slidesToShow: 4.2,
 		slidesToScroll: 1,
 		responsive: [
 			{
