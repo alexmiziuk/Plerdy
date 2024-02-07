@@ -53,78 +53,77 @@ document.addEventListener("DOMContentLoaded", function () {
 	setTimeout(function () {
 		openModal();
 	}, 7000);
-});
+
+	const form = document.querySelector("form[name='contact-form']");
+	const nameInput = document.querySelector("input[name='name']");
+	const phoneInput = document.querySelector("input[name='phone']");
+	const phoneBox = document.querySelector(".modal-tel-box");
+	const checkbox = document.querySelector("input[name='checkbox']");
+	const privacy = document.querySelector(".modal-container-privacy");
+	const containerItem = document.querySelector(".modal-container-item");
+	const error = document.querySelector(".error-checkbox");
 
 
-const form = document.querySelector("form[name='contact-form']");
-const nameInput = document.querySelector("input[name='name']");
-const phoneInput = document.querySelector("input[name='phone']");
-const phoneBox = document.querySelector(".modal-tel-box");
-const checkbox = document.querySelector("input[name='checkbox']");
-const privacy = document.querySelector(".modal-container-privacy");
-const containerItem = document.querySelector(".modal-container-item");
-const error = document.querySelector(".error-checkbox");
+	nameInput.isValid = () => !!nameInput.value;
+	phoneInput.isValid = () => isValidPhone(phoneInput.value);
+	checkbox.isValid = () => checkbox.checked;
 
+	const inputFields = [nameInput, phoneInput, checkbox];
 
-nameInput.isValid = () => !!nameInput.value;
-phoneInput.isValid = () => isValidPhone(phoneInput.value);
-checkbox.isValid = () => checkbox.checked;
+	const isValidPhone = (phone) => {
+		const re = /[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+		return re.test(String(phone).toLowerCase());
+	};
 
-const inputFields = [nameInput, phoneInput, checkbox];
+	let shouldValidate = false;
+	let isFormValid = false;
 
-const isValidPhone = (phone) => {
-	const re = /[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
-	return re.test(String(phone).toLowerCase());
-};
+	const validateInputs = () => {
+		console.log("we are here");
+		if (!shouldValidate) return;
 
-let shouldValidate = false;
-let isFormValid = false;
+		isFormValid = true;
+		inputFields.forEach((input) => {
+			input.classList.remove("invalid");
+			input.nextElementSibling.classList.add("hide");
 
-const validateInputs = () => {
-	console.log("we are here");
-	if (!shouldValidate) return;
+			if (!input.isValid()) {
+				input.classList.add("invalid");
+				isFormValid = false;
+				input.nextElementSibling.classList.remove("hide");
+			}
+		});
 
-	isFormValid = true;
-	inputFields.forEach((input) => {
-		input.classList.remove("invalid");
-		input.nextElementSibling.classList.add("hide");
+		if (!phoneInput.isValid()) {
+			phoneBox.classList.add("invalid");
+		} else {
+			phoneBox.classList.remove("invalid");
+		}
 
-		if (!input.isValid()) {
-			input.classList.add("invalid");
-			isFormValid = false;
-			input.nextElementSibling.classList.remove("hide");
+		if (!checkbox.isValid()) {
+			privacy.classList.add("invalid-checkbox");
+			error.classList.remove("hide");
+		} else {
+			privacy.classList.remove("invalid-checkbox");
+			containerItem.classList.remove("hide");
+			error.classList.add("hide");
+
+		}
+	};
+
+	form.addEventListener("submit", (e) => {
+		e.preventDefault();
+		shouldValidate = true;
+		validateInputs();
+		if (isFormValid) {
+			console.log("happy");
+			form.reset();
+			// TODO: DO AJAX REQUEST
 		}
 	});
 
-	if (!phoneInput.isValid()) {
-		phoneBox.classList.add("invalid");
-	} else {
-		phoneBox.classList.remove("invalid");
-	}
-
-	if (!checkbox.isValid()) {
-		privacy.classList.add("invalid-checkbox");
-		error.classList.remove("hide");
-	} else {
-		privacy.classList.remove("invalid-checkbox");
-		containerItem.classList.remove("hide");
-		error.classList.add("hide");
-
-	}
-};
-
-form.addEventListener("submit", (e) => {
-	e.preventDefault();
-	shouldValidate = true;
-	validateInputs();
-	if (isFormValid) {
-		console.log("happy");
-		form.reset();
-		// TODO: DO AJAX REQUEST
-	}
+	inputFields.forEach((input) => input.addEventListener("input", validateInputs));
 });
-
-inputFields.forEach((input) => input.addEventListener("input", validateInputs));
 
 $(document).ready(function () {
 	$('.reasons-inner-carousel').slick({
@@ -148,7 +147,24 @@ $(document).ready(function () {
 				}
 			},
 			{
-				breakpoint: 768,
+				breakpoint: 1060,
+				settings: {
+					slidesToScroll: 1,
+					slidesToShow: 3.5,
+					dots: true
+				}
+			},
+
+			{
+				breakpoint: 849,
+				settings: {
+					slidesToScroll: 1,
+					slidesToShow: 3,
+					dots: true
+				}
+			},
+			{
+				breakpoint: 701,
 				settings: {
 					slidesToScroll: 1,
 					slidesToShow: 2,
@@ -156,7 +172,15 @@ $(document).ready(function () {
 				}
 			},
 			{
-				breakpoint: 480,
+				breakpoint: 504,
+				settings: {
+					slidesToScroll: 1,
+					slidesToShow: 1.4,
+					dots: true
+				}
+			},
+			{
+				breakpoint: 400,
 				settings: {
 					slidesToScroll: 1,
 					slidesToShow: 1,
