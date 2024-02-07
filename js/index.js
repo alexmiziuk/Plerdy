@@ -118,6 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		if (isFormValid) {
 			console.log("happy");
 			form.reset();
+			alert("Thank you");
 			// TODO: DO AJAX REQUEST
 		}
 	});
