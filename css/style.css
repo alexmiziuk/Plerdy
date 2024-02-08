@@ -392,6 +392,9 @@ a {
 	background-color: #fff;
 	border: 1px solid #ccc;
 }
+.modal-country-dropdown:hover .modal-options-list {
+	display: block !important;
+}
 .modal-options-list li {
 	padding: 10px;
 	cursor: pointer;
