@@ -117,7 +117,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	const error = document.querySelector(".error-checkbox");
 
 
-	nameInput.isValid = () => !!nameInput.value;
+	/* nameInput.isValid = () => !!nameInput.value; */
+	nameInput.isValid = () => /^[\p{L}\s]+$/u.test(nameInput.value);
 	phoneInput.isValid = () => isValidPhone(phoneInput.value);
 	checkbox.isValid = () => checkbox.checked;
 
