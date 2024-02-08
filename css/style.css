@@ -465,6 +465,10 @@ a {
 }
 .modal-container-item a {
 	color: rgb(93, 120, 255);
+	transition: all 0.3s;
+}
+.modal-container-item a:hover {
+	color: rgb(52, 68, 150);
 }
 .modal-logo-link {
 	position: absolute;
