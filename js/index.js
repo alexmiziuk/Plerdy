@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	const optionsList = dropdown.querySelector(".modal-options-list");
 	const listItems = optionsList.querySelectorAll("li");
 
-
 	selectedOption.addEventListener("click", function () {
 		optionsList.style.display = optionsList.style.display === "block" ? "none" : "block";
 	});
@@ -62,7 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	const promoBtn = document.querySelector('.promo-btn');
 	const layer = document.querySelector('.layer');
 	const btnExit = document.querySelector('.modal-button-exit');
-	const body = document.body;
 
 	promoBtn.addEventListener('click', function () {
 		openModal();
@@ -74,17 +72,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	function openModal() {
 		layer.classList.add('layer-open');
-		body.style.overflow = 'hidden';
+		$('body').disableScroll();
 	}
 
 	function closeModal() {
 		layer.classList.remove('layer-open');
-		body.style.overflow = '';
+		$('body').enableScroll();
 	}
 
 	setTimeout(function () {
 		openModal();
 	}, 7000);
+
+	$.fn.disableScroll = function () {
+		this.each(function () {
+			const scrollTop = $(window).scrollTop();
+			$(this).css({
+				overflow: 'scroll',
+				position: 'fixed',
+				width: '100%',
+				top: `-${scrollTop}px`
+			});
+		});
+	};
+
+	$.fn.enableScroll = function () {
+		const scrollY = this.css('top');
+		this.css({
+			overflow: '',
+			position: '',
+			top: '',
+			width: ''
+		});
+		$('html, body').scrollTop(-parseInt(scrollY || '0'));
+	};
 
 	const form = document.querySelector("form[name='contact-form']");
 	const nameInput = document.querySelector("input[name='name']");
